@@ -54,7 +54,24 @@ Step 8: Download config and checkpoint files.
 mim download mmdet --config yolov3_mobilenetv2_320_300e_coco --dest .
 ```
 
-# Errors might encountered:
+## Running the code
+
+For webcam, running 
+```shell
+python demo/webcam_demo.py
+```
+Every time after restart the minicoda, run the following code will run the webcam_demo
+```shell
+conda activate openmmlab
+cd mmpose
+python demo/webcam_demo.py
+```
+
+## Coordinates of the key points
+
+Adjustment was made to the file mmpose/mmpose/visulization/local_visualizer.py to generate a csv file including key points ID, name, time, X, Y, and confidence level.
+
+## Errors might encountered:
 
 1. Error appears saying "Building wheel for pycocotools (pyproject.toml) did not run successfully." and "ERROR: Could not build wheels for pycocotools, which is required to install pyproject.toml-based projects". 
 

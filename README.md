@@ -86,3 +86,9 @@ Try intall MMDetection again by using
 ```shell
 mim install "mmdet>=3.0.0rc0"
 ```
+If this does not solve the issue, trying uninstall mmcv and mmcv-full first
+```shell
+mim uninstall mmcv
+mim uninstall mmcv-full
+```
+Then reinstall the correct verison of mmcv from official website (https://mmcv.readthedocs.io/en/latest/get_started/installation.html).

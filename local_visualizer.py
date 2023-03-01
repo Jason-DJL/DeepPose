@@ -12,8 +12,6 @@ from mmengine.visualization import Visualizer
 
 from mmpose.registry import VISUALIZERS
 from mmpose.structures import PoseDataSample
-
-#import time
 from timeit import default_timer as timer
 
 
@@ -270,7 +268,6 @@ class PoseLocalVisualizer(Visualizer):
                     # write to csv
                     if self.output_file is not None:
                         t = timer()
-                        
                         kpt_name = self.dataset_meta['keypoint_id2name'][kid]
                         self.output_file.write(F"{kid},{kpt_name},{t},{kpt[0]},{kpt[1]},{score[kid]}\n")
 
